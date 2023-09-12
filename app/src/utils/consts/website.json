@@ -1,0 +1,166 @@
+{
+     "appName":"EXAMPLE",
+     "phone":"+90 000 000 00 00",
+     
+     "preHeader":{
+          "language":[
+               {
+                    "title":"Türkiye",
+                    "script":""
+               },
+               {
+                    "title":"english",
+                    "script":""
+               }
+          ],
+          "page":[
+               {
+                    "title":"Hesabım",
+                    "url":"/account"
+               },
+               {
+                    "title":"kayıt ol",
+                    "url":"/account"
+               },
+               {
+                    "title":"giriş yap",
+                    "url":"/account"
+               }
+          ]
+     },
+     "header":{
+          "logo":{
+               "title":"EXAMPLE",
+               "logoUrl":"../../../assets/corporate/img/logos/logo-shop-red.png",
+               "url":"http://localhost/dashboard/MetronicThemePhp/app/src/router/layout/WEB_FOR_LAY/index.php"
+          },
+          "myCard":{
+               "productName":"ürün",
+               "lookMyCardButton":"SEPETİ GÖRÜNTÜLE",
+               "complateTheOrderButton":"ŞİPARİŞİ TAMAMLA"
+          },
+          "pages":[
+               {"title":"kadın","url":""},
+               {"title":"erkek","url":""},
+               {"title":"çocuk","url":""},
+               {"title":"blog","url":""},
+               {"title":"hakkımızda","url":""}
+          ]
+     },
+     "brands":[
+          {
+               "title":"canon",
+               "imageUrl":"../../../assets/pages/img/brands/canon.jpg",
+               "url":"/"
+          },
+          {
+               "title":"esprit",
+               "imageUrl":"../../../assets/pages/img/brands/esprit.jpg",
+               "url":"/"
+          },
+          {
+               "title":"gap",
+               "imageUrl":"../../../assets/pages/img/brands/gap.jpg",
+               "url":"/"
+          },
+          {
+               "title":"next",
+               "imageUrl":"../../../assets/pages/img/brands/next.jpg",
+               "url":"/"
+          },
+          {
+               "title":"puma",
+               "imageUrl":"../../../assets/pages/img/brands/puma.jpg",
+               "url":"/"
+          },
+          {
+               "title":"zara",
+               "imageUrl":"../../../assets/pages/img/brands/zara.jpg",
+               "url":"/"
+          }
+
+     ],
+     "stepFooter":[
+          {
+               "title":"ÜCRETSIZ",
+               "subTitle":"3 GÜNE ÜCRETSIZ HIZLI KARGO",
+               "icon":"fa fa-truck"
+          },
+          {
+               "title":"PAKETLEME",
+               "subTitle":"ÖZEL PAKETLEME ILE HEDIYE ŞEKLINDE TESLIMAT",
+               "icon":"fa fa-gift"
+          },
+          {
+               "title":"YANINDA",
+               "subTitle":"7/24 ANINDA YANINDA OLAN EKİP",
+               "icon":"fa fa-phone"
+          }
+     ],
+     "footer":{
+          "about":{
+               "name":"hakkımızda",
+               "value":"lorem ipsum dolor sit amet, consectetur adipiscing lorem ipsum dolor sit amet, consectetur adipiscing lorem ipsum dolor sit amet, consectetur adipiscing" 
+          },
+          "category":{
+               "name":"kategori",
+               "value":[]
+          },
+          "news":{
+               "name":"EN SON YAZILANLAR",
+               "value":[]
+          },
+          "contact":{
+               "name":"contact",
+               "value":[
+                    {"name":"adress","value":"samsun/ilkadım 0.sokak"},
+                    {"name":"phone","value":"+90 000 000 00 00"},
+                    {"name":"fax","value":"+90 000 000 00 00"},
+                    {"name":"email","value":"info@example.com"}
+               ]
+          },
+          "socialMedia":[
+               {
+                    "class":"rss",
+                    "url":"https://rss.com/example"
+               },
+               {
+                    "class":"googleplus",
+                    "url":"https://googleplus.com/example"
+               },
+               {
+                    "class":"linkedin",
+                    "url":"https://linkedin.com/example"
+               },
+               {
+                    "class":"youtube",
+                    "url":"https://youtube.com/example"
+               },
+               {
+                    "class":"facebook",
+                    "url":"https://facebook.com/example"
+               },
+               {
+                    "class":"vimeo",
+                    "url":"https://vimeo.com/example"
+               }
+               
+          ],
+          "cardSupport":[
+               {
+                    "class":"visa",
+                    "url":"../../../assets/corporate/img/payments/visa.jpg"
+               },
+               {
+                    "class":"mastercard",
+                    "url":"../../../assets/corporate/img/payments/MasterCard.jpg"
+               },
+               {
+                    "class":"paypal",
+                    "url":"../../../assets/corporate/img/payments/PayPal.jpg"
+               }
+               
+          ],
+          "value":"Tüm Haklarla Saklıdır"
+     }
+}

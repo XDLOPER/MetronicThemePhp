@@ -3,6 +3,28 @@
      "phone":"+90 000 000 00 00",
      
      "preHeader":{
+          "pageLeft":[
+               {
+                    "title":"about",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=about",
+                    "icon":"fa fa-certificate"
+               },
+               {
+                    "title":"privacy policy",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=privacy-policy",
+                    "icon":"fa fa-user-secret"
+               },
+               {
+                    "title":"frequently ask",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=faq",
+                    "icon":"fa fa-question-circle"
+               },
+               {
+                    "title":"terms&conditions",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=terms-conditions",
+                    "icon":"fa fa-comments-o"
+               }
+          ],
           "language":[
                {
                     "title":"Türkiye",
@@ -13,11 +35,12 @@
                     "script":""
                }
           ],
-          "page":[
+          "pageRight":[
                {
                     "title":"Hesabım",
                     "url":"/account"
                },
+               
                {
                     "title":"kayıt ol",
                     "url":"/account"
@@ -32,7 +55,7 @@
           "logo":{
                "title":"EXAMPLE",
                "logoUrl":"../../../assets/corporate/img/logos/logo-shop-red.png",
-               "url":"http://localhost/dashboard/MetronicThemePhp/app/src/router/layout/WEB_FOR_LAY/index.php"
+               "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php"
           },
           "myCard":{
                "productName":"ürün",

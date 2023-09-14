@@ -3,10 +3,16 @@
         <div class="container">
             <div class="row">
                 <!-- BEGIN TOP BAR LEFT PART -->
-                <div class="col-md-6 col-sm-6 additional-shop-info">
+                <div class="col-md-8 col-sm-8 additional-shop-info">
                     <ul class="list-unstyled list-inline">
-                        <li><i class="fa fa-phone"></i><span><?php echo $decodedWebsite['phone']; ?></span></li>
-
+                      <?php 
+                      
+                      foreach ($decodedWebsite['preHeader']['pageLeft'] as $key => $value) {
+                      ?>
+                        <li><a href="<?php echo !empty($value['url']) ? $value['url'] : "http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php" ?>"><i class="<?php echo $value['icon'] ?>"></i><span><?php echo $value['title']; ?></span></a></li>
+                      <?php
+                      }
+                      ?>
                         <!-- BEGIN LANGS -->
                         <li class="langs-block">
                             <a href="javascript:void(0);" class="current">dynamic Türkiye </a>
@@ -27,11 +33,11 @@
                 </div>
                 <!-- END TOP BAR LEFT PART -->
                 <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-6 col-sm-6 additional-nav">
+                <div class="col-md-4 col-sm-4 additional-nav">
                     <ul class="list-unstyled list-inline pull-right">
                               <?php 
                               
-                              foreach ($decodedWebsite['preHeader']['page'] as $key => $value) {
+                              foreach ($decodedWebsite['preHeader']['pageRight'] as $key => $value) {
                                 ?>
                                   <li><a href="<?php echo $value['url']?>"><?php echo $value['title']?></a></li>
                                 <?php

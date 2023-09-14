@@ -163,9 +163,6 @@
               </a>
                 
               <ul class="dropdown-menu">
-                <li class="active"><a href="../../../../../theme/shop-index.html">Home Default</a></li>
-                <li><a href="../../../../../theme/">Home Header Fixed</a></li>
-                <li><a href="../../../../../theme/shop-index-light-footer.html">Home Light Footer</a></li>
                 <li><a href="../../../../../theme/shop-product-list.html">Product List</a></li>
                 <li><a href="../../../../../theme/shop-search-result.html">Search Result</a></li>
                 <li><a href="../../../../../theme/shop-item.html">Product Page</a></li>
@@ -178,9 +175,6 @@
                 <li><a href="../../../../../theme/shop-wishlist.html">My Wish List</a></li>
                 <li><a href="../../../../../theme/shop-goods-compare.html">Product Comparison</a></li>
                 <li><a href="../../../../../theme/shop-standart-forms.html">Standart Forms</a></li>
-                <li><a href="../../../../../theme/shop-faq.html">FAQ</a></li>
-                <li><a href="../../../../../theme/shop-privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="../../../../../theme/shop-terms-conditions-page.html">Terms &amp; Conditions</a></li>
               </ul>
             </li>
         <!-- DROPDOWN MENU FINISH -->

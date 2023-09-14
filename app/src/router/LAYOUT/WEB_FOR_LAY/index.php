@@ -56,34 +56,94 @@
 <body class="ecommerce">
 
 <?php 
+// env variables start
+// $ENVPHONE = getenv();
 
-$website = file_get_contents(__DIR__ . '/../../../utils/consts/website.json');
-if ($website === false) {
-    echo "Dosya okuma hatası!";
-} else {
-    $decodedWebsite = json_decode($website, true);
-    if ($decodedWebsite === null) {
-        echo "JSON çözme hatası: " . json_last_error_msg();
+// env variables end
+
+
+// layout data imports 
+    $website = file_get_contents(__DIR__ . '/../../../utils/consts/website.json');
+    if ($website === false) {
+        echo "Dosya okuma hatası!";
+    } else {
+        $decodedWebsite = json_decode($website, true);
+        if ($decodedWebsite === null) {
+            echo "JSON çözme hatası: " . json_last_error_msg();
+        }
     }
-  }
+// layout data imports finish 
 
-?>
+// layout imports start
+    require_once('./container/preHeader/index.php');
+    require_once('./container/header/index.php');
 
-<?php 
+// layout route start
+    $PAGE = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-require_once('./container/preHeader/index.php');
-require_once('./container/header/index.php');
+    switch($PAGE){
+        // dynamic page routes
+        case "home":
+            require_once('../../page/home/index.php');
+            break;
+        case "product-search":
+            require_once('../../page/product-search/index.php');
+            break;
+        case "product-list":
+            require_once('../../page/product-list/index.php');
+            break;
+        case "product-page":
+            require_once('../../page/product-page/index.php');
+            break;
+        case "product-comparison":
+            require_once('../../page/product-comparison/index.php');
+            break;
+        case "shopping-card":
+            require_once('../../page/shopping-card/index.php');
+            break;
+        case "checkout":
+            require_once('../../page/checkout/index.php');
+            break;
+        case "account":
+            require_once('../../page/account/index.php');
+            break;
+        case "wish-list":
+            require_once('../../page/wish-list/index.php');
+            break;
+        
+        // form page routes
+        case "forms":
+            require_once('../../page/home/index.php');
+            break;
 
-?>
+        // standart static page 
+        case "terms-conditions":
+            require_once('../../page/terms-conditions/index.php');
+            break;
+        case "faq":
+            require_once('../../page/faq/index.php');
+            break;
+        case "privacy-policy":
+            require_once('../../page/privacy-policy/index.php');
+            break;
+        case "about":
+            require_once('../../page/about/index.php');
+            break;
 
-<h1>sections sayfalandırma yapılacak</h1>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        // error pages
+        case "500":
+            require_once('../../page/errors/500/index.php');
+            break;
+        default:
+            require_once('../../page/errors/404/index.php');
+            break;
+    }
+// layout route finish
 
-<?php
+    require_once('./container/brands/index.php');
+    require_once('./container/footer/index.php');
 
-require_once('./container/brands/index.php');
-require_once('./container/footer/index.php');
-
+// layout imports finish
 ?>
 
     <!-- Load javascripts at bottom, this will reduce page load time -->

@@ -41,8 +41,8 @@
 
               </ul>
               <div class="text-right">
-                <a href="shop-shopping-cart.html" class="btn btn-default"><?php echo $decodedWebsite['header']['myCard']['lookMyCardButton'];?></a>
-                <a href="shop-checkout.html" class="btn btn-primary"><?php echo $decodedWebsite['header']['myCard']['complateTheOrderButton'];?></a>
+                <a href="<?php echo $decodedWebsite['header']['myCard']['lookMyCardButton']['url'];?>" class="btn btn-default"><?php echo $decodedWebsite['header']['myCard']['lookMyCardButton']['title'];?></a>
+                <a href="<?php echo $decodedWebsite['header']['myCard']['complateTheOrderButton']['url'];?>" class="btn btn-primary"><?php echo $decodedWebsite['header']['myCard']['complateTheOrderButton']['title'];?></a>
               </div>
             </div>
           </div>            

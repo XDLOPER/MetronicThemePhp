@@ -6,22 +6,22 @@
           "pageLeft":[
                {
                     "title":"about",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=about",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=about",
                     "icon":"fa fa-certificate"
                },
                {
                     "title":"privacy policy",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=privacy-policy",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=privacy-policy",
                     "icon":"fa fa-user-secret"
                },
                {
                     "title":"frequently ask",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=faq",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=faq",
                     "icon":"fa fa-question-circle"
                },
                {
                     "title":"terms&conditions",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=terms-conditions",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=terms-conditions",
                     "icon":"fa fa-comments-o"
                }
           ],
@@ -59,8 +59,14 @@
           },
           "myCard":{
                "productName":"ürün",
-               "lookMyCardButton":"SEPETİ GÖRÜNTÜLE",
-               "complateTheOrderButton":"ŞİPARİŞİ TAMAMLA"
+               "lookMyCardButton":{
+                    "title":"SEPETİ GÖRÜNTÜLE",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=wish-list"
+               },
+               "complateTheOrderButton":{
+                    "title":"SİPARİŞİ TAMAMLA",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=checkout"
+               }
           },
           "pages":[
                {"title":"kadın","url":""},

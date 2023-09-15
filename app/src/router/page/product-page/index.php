@@ -9,72 +9,12 @@
         <div class="row margin-bottom-40">
           <!-- BEGIN SIDEBAR -->
           <div class="sidebar col-md-3 col-sm-5">
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Ladies</a></li>
-              <li class="list-group-item clearfix dropdown active">
-                <a href="shop-product-list.html" class="collapsed">
-                  <i class="fa fa-angle-right"></i>
-                  Mens
-                  
-                </a>
-                <ul class="dropdown-menu" style="display:block;">
-                  <li class="list-group-item dropdown clearfix active">
-                    <a href="shop-product-list.html" class="collapsed"><i class="fa fa-angle-right"></i> Shoes </a>
-                      <ul class="dropdown-menu" style="display:block;">
-                        <li class="list-group-item dropdown clearfix">
-                          <a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic </a>
-                          <ul class="dropdown-menu">
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 1</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 2</a></li>
-                          </ul>
-                        </li>
-                        <li class="list-group-item dropdown clearfix active">
-                          <a href="shop-product-list.html" class="collapsed"><i class="fa fa-angle-right"></i> Sport  </a>
-                          <ul class="dropdown-menu" style="display:block;">
-                            <li class="active"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 1</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 2</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                  </li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Trainers</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Jeans</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Chinos</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> T-Shirts</a></li>
-                </ul>
-              </li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Kids</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Accessories</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sports</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Brands</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Electronics</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Home &amp; Garden</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Custom Link</a></li>
-            </ul>
 
-            <div class="sidebar-products clearfix">
-              <h2>Bestsellers</h2>
-              <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k1.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$31.00</div>
-              </div>
-              <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k4.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$23.00</div>
-              </div>
-              <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k3.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$86.00</div>
-              </div>
-            </div>
           </div>
           <!-- END SIDEBAR -->
 
           <!-- BEGIN CONTENT -->
-          <div class="col-md-9 col-sm-7">
+
             <div class="product-page">
               <div class="row">
                 <div class="col-md-6 col-sm-6">
@@ -100,7 +40,7 @@
                   </div>
                   <div class="description">
                     <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed nonumy nibh sed euismod laoreet dolore magna aliquarm erat volutpat 
-Nostrud duis molestie at dolore.</p>
+            Nostrud duis molestie at dolore.</p>
                   </div>
                   <div class="product-page-options">
                     <div class="pull-left">
@@ -234,105 +174,109 @@ Nostrud duis molestie at dolore.</p>
                 <div class="sticker sticker-sale"></div>
               </div>
             </div>
-          </div>
-          <!-- END CONTENT -->
-        </div>
-        <!-- END SIDEBAR & CONTENT -->
+          
+                  <!-- BEGIN SIMILAR PRODUCTS -->
+                  <!-- burası normalde böyle değilde layout bozulmasın diye içe soktum -->
 
-        <!-- BEGIN SIMILAR PRODUCTS -->
-        <div class="row margin-bottom-40">
-          <div class="col-md-12 col-sm-12">
-            <h2>Most popular products</h2>
-            <div class="owl-carousel owl-carousel4">
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+            <div class="row margin-bottom-40">
+              <div class="col-md-12 col-sm-12">
+                <h2>Most popular products</h2>
+                <div class="owl-carousel owl-carousel4">
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                      <div class="sticker sticker-new"></div>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                  <div class="sticker sticker-new"></div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress2</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress2</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                </div>
-              </div>
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k3.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k3.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress3</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress3</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                </div>
-              </div>
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress4</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                      <div class="sticker sticker-sale"></div>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress4</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                  <div class="sticker sticker-sale"></div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress5</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress5</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                </div>
-              </div>
-              <div>
-                <div class="product-item">
-                  <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
-                    <div>
-                      <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                      <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                  <div>
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                          <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        </div>
+                      </div>
+                      <h3><a href="shop-item.html">Berry Lace Dress6</a></h3>
+                      <div class="pi-price">$29.00</div>
+                      <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress6</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- END SIMILAR PRODUCTS -->
+            <!-- END SIMILAR PRODUCTS -->
+              </div>
+              <!-- END CONTENT -->
+            
+            <!-- END SIDEBAR & CONTENT -->
+
+
       </div>
     </div>

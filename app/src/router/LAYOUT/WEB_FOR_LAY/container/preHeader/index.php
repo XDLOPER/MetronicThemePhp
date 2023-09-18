@@ -38,9 +38,14 @@
                               <?php 
                               
                               foreach ($decodedWebsite['preHeader']['pageRight'] as $key => $value) {
-                                ?>
-                                  <li><a href="<?php echo $value['url']?>"><?php echo $value['title']?></a></li>
-                                <?php
+                                if($value['auth'] == $APP_STORE->getActive()){
+                                  ?>
+                                    <li><a href="<?php echo $value['url']?>"><?php echo $value['title']?></a></li>
+                                  <?php
+                                }else{
+
+                                }
+
                               }
                               
                               ?>

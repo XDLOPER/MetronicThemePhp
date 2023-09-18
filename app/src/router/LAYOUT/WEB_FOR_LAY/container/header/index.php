@@ -158,7 +158,7 @@
 
             <li style="display:block" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                Pages 
+                dropdown 
                 
               </a>
                 

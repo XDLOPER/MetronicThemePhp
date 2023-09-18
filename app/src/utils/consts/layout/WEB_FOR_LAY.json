@@ -38,16 +38,19 @@
           "pageRight":[
                {
                     "title":"Hesabım",
-                    "url":"/account"
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=account",
+                    "auth":true
                },
                
                {
                     "title":"kayıt ol",
-                    "url":"/account"
+                    "url":"/account",
+                    "auth":false
                },
                {
                     "title":"giriş yap",
-                    "url":"/account"
+                    "url":"/account",
+                    "auth":false
                }
           ]
      },

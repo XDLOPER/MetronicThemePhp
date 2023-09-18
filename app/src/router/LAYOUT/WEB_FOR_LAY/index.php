@@ -55,14 +55,23 @@
 <!-- Body BEGIN -->
 <body class="ecommerce">
 
-<?php 
-// env variables start
-// $ENVPHONE = getenv();
+<?php
 
-// env variables end
+// project initial start
+    require_once('../../../store/index.php');
+    require_once('../../../store/app/initial.php');
+
+    // instance
+    $APP_STORE = APP_STORE::getInstance($APP_STORE_INITIAL);
+    $APP_STORE->setActive(false);
+
+// project initial end
 
 
-// layout data imports 
+
+
+
+// layout template imports start
 
     $WEB_FOR_LAY = file_get_contents(__DIR__ . '/../../../utils/consts/layout/WEB_FOR_LAY.json');
     if ($WEB_FOR_LAY === false) {
@@ -74,55 +83,57 @@
         }
     }
 
-// layout data imports finish 
+// layout template imports finish   
 
 // layout imports start
     require_once('./container/preHeader/index.php');
     require_once('./container/header/index.php');
 
-// layout route start
-    $PAGE = isset($_GET['page']) ? $_GET['page'] : 'home';
+    // layout route start
+        $PAGE = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-    switch($PAGE){
-        // private layout routes start 
-        case'store':
-            require_once('../WEB_FOR_LAY/LEFT_BAR_LAY/index.php');
-            break;
-        // private layout routes end
-        
-        // dynamic page routes
-        case "home":
-            require_once('../../page/home/index.php');
-            break;
-        case "shopping-card":
-            require_once('../../page/shopping-card/index.php');
-            break;
-        case "checkout":
-            require_once('../../page/checkout/index.php');
-            break;
-        // dynamic page routes end
-
-        // form page routes
-        case "forms":
-            require_once('../../page/home/index.php');
-            break;
-        // form page routes end 
+        switch($PAGE){
+            // private layout routes start 
+            case'store':
+                require_once('../WEB_FOR_LAY/LEFT_BAR_LAY/index.php');
+                break;
+            // private layout routes end
             
-        // error pages
-        case "500":
-            require_once('../../page/errors/500/index.php');
-            break;
-        default:
-            require_once('../../page/errors/404/index.php');
-            break;
-        // error pages end
-    }
-// layout route finish
+            // dynamic page routes
+            case "home":
+                require_once('../../page/home/index.php');
+                break;
+            case "shopping-card":
+                require_once('../../page/shopping-card/index.php');
+                break;
+            case "checkout":
+                require_once('../../page/checkout/index.php');
+                break;
+            // dynamic page routes end
+
+            // form page routes
+            case "forms":
+                require_once('../../page/home/index.php');
+                break;
+            // form page routes end 
+                
+            // error pages
+            case "500":
+                require_once('../../page/errors/500/index.php');
+                break;
+            default:
+                require_once('../../page/errors/404/index.php');
+                break;
+            // error pages end
+        }
+    // layout route finish
 
     require_once('./container/brands/index.php');
     require_once('./container/footer/index.php');
 
 // layout imports finish
+
+
 ?>
 
     <!-- Load javascripts at bottom, this will reduce page load time -->

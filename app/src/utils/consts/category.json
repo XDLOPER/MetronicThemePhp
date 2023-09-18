@@ -1,0 +1,30 @@
+{
+    "electronic":{
+        "pc":{
+            "laptop":{
+                
+            },
+            "desktop":{}
+        },
+        "tv":{},
+        "watch":{}        
+    },
+    "wearing":{
+        "clothes":{
+            "outerwear":{
+                "dress":{}
+            },
+            "underwear":{}
+        },
+        "shoe":{
+            
+        },
+        "accessories":{
+            "case":{
+                "suitcase":{},
+                "bag":{}
+            }
+        }
+    }
+
+}

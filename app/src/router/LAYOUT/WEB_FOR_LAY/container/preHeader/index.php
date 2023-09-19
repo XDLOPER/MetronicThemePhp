@@ -9,7 +9,7 @@
                       
                       foreach ($decodedWebsite['preHeader']['pageLeft'] as $key => $value) {
                       ?>
-                        <li><a href="<?php echo !empty($value['url']) ? $value['url'] : "http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php" ?>"><i class="<?php echo $value['icon'] ?>"></i><span><?php echo $value['title']; ?></span></a></li>
+                        <li><a href="<?php echo !empty($value['url']) ? $value['url'] : "http://localhost/dashboard/metronicPhpTheme/app/index.php" ?>"><i class="<?php echo $value['icon'] ?>"></i><span><?php echo $value['title']; ?></span></a></li>
                       <?php
                       }
                       ?>

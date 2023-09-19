@@ -1,0 +1,12 @@
+{
+    "title":"kayıt ol",
+    "forms":[
+        {"title":"kullanıcı adı","placeholder":"Örnek:kelebek_im"},
+        {"title":"şifre","placeholder":"Örnek:*****"},
+        {"title":"email","placeholder":"Örnek:**@**.com"},
+        {"title":"telefon","placeholder":"Örnek:555-555-55-55"}
+    ],
+    "buttons":[
+        {"title":"kayıt ol","url":"/"}
+    ]
+}

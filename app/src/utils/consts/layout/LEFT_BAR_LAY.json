@@ -3,19 +3,19 @@
         "sidebar":[
             {
                 "title":"about",
-                "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=about"
+                "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=about"
             },
             {
                 "title":"privacy policy",
-                "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=privacy-policy"
+                "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=privacy-policy"
             },
             {
                 "title":"frequently ask",
-                "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=faq"
+                "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=faq"
             },
             {
                 "title":"terms conditions",
-                "url":"http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php?page=store&content=terms-conditions"
+                "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=terms-conditions"
             }
         ],
         "about":{

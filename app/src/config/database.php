@@ -70,6 +70,13 @@ class INSERT extends CRUD {
 
 class SELECTS extends CRUD{
 
+     public function getSelectsSelf($prepare = '',$execute = []){
+          $db = $this->db;
+          $data = $db->prepare($prepare);
+          $data->execute($execute);
+          return $data;
+     }
+
      public function getSelectsTable(){
           $db = $this->db;
           $data = $db->prepare("SELECT * FROM $this->table");

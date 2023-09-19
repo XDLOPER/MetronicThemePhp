@@ -27,24 +27,24 @@
   <!-- Fonts END -->
 
   <!-- Global styles START -->          
-  <link href="../../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="src/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="src/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Global styles END --> 
    
   <!-- Page level plugin styles START -->
-  <link href="../../../assets/pages/css/animate.css" rel="stylesheet">
-  <link href="../../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
-  <link href="../../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+  <link href="src/assets/pages/css/animate.css" rel="stylesheet">
+  <link href="src/assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+  <link href="src/assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
   <!-- Page level plugin styles END -->
 
   <!-- Theme styles START -->
-  <link href="../../../assets/pages/css/components.css" rel="stylesheet">
-  <link href="../../../assets/pages/css/slider.css" rel="stylesheet">
-  <link href="../../../assets/pages/css/style-shop.css" rel="stylesheet" type="text/css">
-  <link href="../../../assets/corporate/css/style.css" rel="stylesheet">
-  <link href="../../../assets/corporate/css/style-responsive.css" rel="stylesheet">
-  <link href="../../../assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
-  <link href="../../../assets/corporate/css/custom.css" rel="stylesheet">
+  <link href="src/assets/pages/css/components.css" rel="stylesheet">
+  <link href="src/assets/pages/css/slider.css" rel="stylesheet">
+  <link href="src/assets/pages/css/style-shop.css" rel="stylesheet" type="text/css">
+  <link href="src/assets/corporate/css/style.css" rel="stylesheet">
+  <link href="src/assets/corporate/css/style-responsive.css" rel="stylesheet">
+  <link href="src/assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
+  <link href="src/assets/corporate/css/custom.css" rel="stylesheet">
 
 
 
@@ -56,22 +56,23 @@
 <body class="ecommerce">
 
 <?php
-
 // project initial start
-    require_once('../../../store/index.php');
-    require_once('../../../store/app/initial.php');
+
+    // database connection
+    require_once(realpath(__DIR__ . '/../../../config/database.php'));
+
+    // store connection
+    require_once(realpath(__DIR__ . '/../../../store/index.php'));
+    require_once(realpath(__DIR__ . '/../../../store/app/initial.php'));
 
     // instance
     $APP_STORE = APP_STORE::getInstance($APP_STORE_INITIAL);
-    $APP_STORE->setActive(false);
+
 
 // project initial end
 
 
-
-
-
-// layout template imports start
+// template imports start
 
     $WEB_FOR_LAY = file_get_contents(__DIR__ . '/../../../utils/consts/layout/WEB_FOR_LAY.json');
     if ($WEB_FOR_LAY === false) {
@@ -83,53 +84,65 @@
         }
     }
 
-// layout template imports finish   
+// template imports finish   
 
 // layout imports start
-    require_once('./container/preHeader/index.php');
-    require_once('./container/header/index.php');
+    require_once(realpath(__DIR__ . '/container/preHeader/index.php'));
+    require_once(realpath(__DIR__ . '/container/header/index.php'));
 
     // layout route start
         $PAGE = isset($_GET['page']) ? $_GET['page'] : 'home';
 
         switch($PAGE){
-            // private layout routes start 
-            case'store':
-                require_once('../WEB_FOR_LAY/LEFT_BAR_LAY/index.php');
+
+            // account routes start
+            case "register":
+                require_once(realpath(__DIR__ . '/../../page/auth/register/index.php'));
                 break;
-            // private layout routes end
-            
+            case "login":
+                require_once(realpath(__DIR__ . '/../../page/auth/login/index.php'));
+                break;
+            // account routes end
+
             // dynamic page routes
             case "home":
-                require_once('../../page/home/index.php');
+                require_once(realpath(__DIR__ . '/../../page/home/index.php'));
                 break;
             case "shopping-card":
-                require_once('../../page/shopping-card/index.php');
+                require_once(realpath(__DIR__ . '/../../page/shopping-card/index.php'));
                 break;
             case "checkout":
-                require_once('../../page/checkout/index.php');
+                require_once(realpath(__DIR__ . '/../../page/checkout/index.php'));
                 break;
             // dynamic page routes end
+            
+            // uniq layout routes start 
+            case'store':
+                require_once(realpath(__DIR__ . '/../WEB_FOR_LAY/LEFT_BAR_LAY/index.php'));
+                break;
+            // uniq layout routes end
 
             // form page routes
             case "forms":
-                require_once('../../page/home/index.php');
+                require_once(realpath(__DIR__ . '/../../page/forms/index.php'));
                 break;
-            // form page routes end 
-                
-            // error pages
-            case "500":
-                require_once('../../page/errors/500/index.php');
+            // form page routes end
+
+            // exit account routes start
+            case "exit":
+                require_once(realpath(__DIR__ . '/../../page/exit/index.php'));
                 break;
+            // exit account routes end
+
+            // load home
             default:
-                require_once('../../page/errors/404/index.php');
+                require_once(realpath(dirname(__FILE__ . '/../../page/errors/404/index.php')));
                 break;
-            // error pages end
         }
     // layout route finish
 
-    require_once('./container/brands/index.php');
-    require_once('./container/footer/index.php');
+    require_once(realpath(__DIR__ . '/container/brands/index.php'));
+    require_once(realpath(__DIR__ . '/container/footer/index.php'));
 
 // layout imports finish
 
@@ -141,21 +154,21 @@
     <!--[if lt IE 9]>
     <script src="assets/plugins/respond.min.js"></script>  
     <![endif]-->
-    <script src="../../../assets/plugins/jquery.min.js" type="text/javascript"></script>
-    <script src="../../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
-    <script src="../../../assets/corporate/scripts/back-to-top.js" type="text/javascript"></script>
-    <script src="../../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="src/assets/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="src/assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="src/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
+    <script src="src/assets/corporate/scripts/back-to-top.js" type="text/javascript"></script>
+    <script src="src/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
     <!-- END CORE PLUGINS -->
 
     <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-    <script src="../../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script><!-- pop up -->
-    <script src="../../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script><!-- slider for products -->
-    <script src='../../../assets/plugins/zoom/jquery.zoom.min.js' type="text/javascript"></script><!-- product zoom -->
-    <script src="../../../assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script><!-- Quantity -->
+    <script src="src/assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script><!-- pop up -->
+    <script src="src/assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script><!-- slider for products -->
+    <script src='src/assets/plugins/zoom/jquery.zoom.min.js' type="text/javascript"></script><!-- product zoom -->
+    <script src="src/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script><!-- Quantity -->
 
-    <script src="../../../assets/corporate/scripts/layout.js" type="text/javascript"></script>
-    <script src="../../../assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
+    <script src="src/assets/corporate/scripts/layout.js" type="text/javascript"></script>
+    <script src="src/assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             Layout.init();    

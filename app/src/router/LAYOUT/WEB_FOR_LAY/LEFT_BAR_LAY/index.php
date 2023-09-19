@@ -1,6 +1,6 @@
 <?php 
 
-$CONTENT = isset($_GET['content']) ? $_GET['content'] : header('location:http://localhost/dashboard/metronicPhpTheme/app/src/router/layout/WEB_FOR_LAY/index.php');
+$CONTENT = isset($_GET['content']) ? $_GET['content'] : null;
 
 // layout data imports 
 
@@ -31,7 +31,6 @@ if ($LEFT_BAR_LAY === false) {
         <div class="row margin-bottom-40">
           <!-- BEGIN SIDEBAR -->
           <div class="sidebar col-md-3 col-sm-5">
-
             <?php 
             // layout route start
 

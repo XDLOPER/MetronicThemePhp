@@ -84,10 +84,10 @@ class SELECTS extends CRUD{
           return $data;
      }
 
-     public function getSelectsQuery($headQuery = '*', $query = ''){
+     public function getSelectsQuery($headQuery = '*', $query = '',$execute = []){
           $db = $this->db;
           $data = $db->prepare("SELECT $headQuery FROM ". $this->table ." $query");
-          $data->execute();
+          $data->execute($execute);
           return $data;
      }
 
@@ -135,10 +135,10 @@ class UPDATE extends CRUD{
 
 class DELETE extends CRUD{
 
-     public function delete($userId){
+     public function getDeleteSelf($prepare = '',$execute = []){
           $db = $this->db;
-          $data = $db->prepare("DELETE FROM " . $this->table . " WHERE id=". $userId ."");
-          $data->execute();
+          $data = $db->prepare($prepare);
+          $data->execute($execute);
           
           return $data;
      }

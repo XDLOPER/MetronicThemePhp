@@ -45,8 +45,8 @@
   <link href="src/assets/corporate/css/style-responsive.css" rel="stylesheet">
   <link href="src/assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="src/assets/corporate/css/custom.css" rel="stylesheet">
-
-
+   <!-- real custom style -->
+  <link href="src/assets/custom.css" rel="stylesheet">
 
   <!-- Theme styles END -->
 </head>
@@ -56,21 +56,6 @@
 <body class="ecommerce">
 
 <?php
-// project initial start
-
-    // database connection
-    require_once(realpath(__DIR__ . '/../../../config/database.php'));
-
-    // store connection
-    require_once(realpath(__DIR__ . '/../../../store/index.php'));
-    require_once(realpath(__DIR__ . '/../../../store/app/initial.php'));
-
-    // instance
-    $APP_STORE = APP_STORE::getInstance($APP_STORE_INITIAL);
-
-
-// project initial end
-
 
 // template imports start
 
@@ -101,7 +86,7 @@
                 break;
             case "login":
                 require_once(realpath(__DIR__ . '/../../page/auth/login/index.php'));
-                break;
+                break; 
             // account routes end
 
             // dynamic page routes
@@ -117,7 +102,7 @@
             // dynamic page routes end
             
             // uniq layout routes start 
-            case'store':
+            case'leftbarlayout':
                 require_once(realpath(__DIR__ . '/../WEB_FOR_LAY/LEFT_BAR_LAY/index.php'));
                 break;
             // uniq layout routes end
@@ -135,8 +120,8 @@
             // exit account routes end
 
             // load home
-            default:
-                require_once(realpath(dirname(__FILE__ . '/../../page/errors/404/index.php')));
+            default: // -> burada sıkıntı var ilerde çözücem
+                require_once(realpath(dirname(__FILE__ . '/../../page/404/index.php')));
                 break;
         }
     // layout route finish
@@ -154,6 +139,7 @@
     <!--[if lt IE 9]>
     <script src="assets/plugins/respond.min.js"></script>  
     <![endif]-->
+    
     <script src="src/assets/plugins/jquery.min.js" type="text/javascript"></script>
     <script src="src/assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
     <script src="src/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      

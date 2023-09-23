@@ -51,6 +51,7 @@ if ($LEFT_BAR_LAY === false) {
                   break;
               // standart static page end
 
+              
               case "product-search":
                   require_once(realpath(dirname(__FILE__) . '/../../../page/product-search/sidebar.php'));
                   break;
@@ -66,10 +67,26 @@ if ($LEFT_BAR_LAY === false) {
               case "account":
                   require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
                   break;
+              case "my-adress":
+                  require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
+                  break;
+              case "settings":
+                  require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
+                  break;                
               case "wish-list":
-                  require_once(realpath(dirname(__FILE__) . '/../../../page/wish-list/sidebar.php'));
+                  require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
                   break;
 
+              // private
+              case "profile-continue":
+                require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
+                break;
+              case "profile-phone-check":
+                require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
+                break;                   
+              case "profile-email-check":
+                require_once(realpath(dirname(__FILE__) . '/../../../page/account/sidebar.php'));
+                break; 
 
             }
 
@@ -115,13 +132,28 @@ if ($LEFT_BAR_LAY === false) {
               case "product-comparison":
                   require_once(realpath(dirname(__FILE__) . '/../../../page/product-comparison/index.php'));
                   break;
+
               case "account":
                   require_once(realpath(dirname(__FILE__) . '/../../../page/account/index.php'));
+                  break;
+              case "my-adress":
+                  require_once(realpath(dirname(__FILE__) . '/../../../page/my-adress/index.php'));
                   break;
               case "wish-list":
                   require_once(realpath(dirname(__FILE__) . '/../../../page/wish-list/index.php'));
                   break;
+              case "settings":
+                  require_once(realpath(dirname(__FILE__) . '/../../../page/settings/index.php'));
+                  break;
 
+
+              // private
+              case "profile-phone-check":
+                require_once(realpath(dirname(__FILE__) . '/../../../page/profile-phone-check/index.php'));
+                break;
+              case "profile-email-check":
+                require_once(realpath(dirname(__FILE__) . '/../../../page/profile-email-check/index.php'));
+                break;
               default:
                   require_once(realpath(dirname(__FILE__) . '/../../../page/errors/404/index.php'));
                   break;

@@ -1,24 +1,12 @@
           <!-- BEGIN CONTENT -->
 
-            <h1>My Account Page</h1>
+            <h1><?php echo $decodedLeftBarLay['account']['title']?></h1>
             <div class="content-page">
-              <h3>My Account</h3>
-              <ul>
-                <li><a href="javascript:;">Edit your account information</a></li>
-                <li><a href="javascript:;">Change your password</a></li>
-                <li><a href="javascript:;">Modify your address book entries</a></li>
-                <li><a href="javascript:;">Modify your wish list</a></li>
-              </ul>
-              <hr>
+              <h3>hoşgeldin : <?php echo $user['username']?></h3>
+              <br>
+              <span>telefon onaylanmış değil<span class="require">*</span> : </span><a href="http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=profile-phone-check"><button class="btn" style="width:100%">telefon onayla</button></a><br><br>
+              <span>email onaylanmış değil : </span><a href="http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=profile-email-check"><button class="btn" style="width:100%">email onayla</button></a>
 
-              <h3>My Orders</h3>
-              <ul>
-                <li><a href="javascript:;">View your order history</a></li>
-                <li><a href="javascript:;">Downloads</a></li>
-                <li><a href="javascript:;">Your Reward Points</a></li>
-                <li><a href="javascript:;">View your return requests</a></li>
-                <li><a href="javascript:;">Your Transactions</a></li>
-              </ul>
             </div>
 
           <!-- END CONTENT -->

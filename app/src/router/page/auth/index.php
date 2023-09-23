@@ -12,7 +12,7 @@ require_once('../../../utils/helpers/validatePhone.php');
 // helper functions start
 function correctID(){
      $ID = ID_generate(30);
-     $correctID = (new SELECTS('users'))->getSelectsQuery('COUNT(*)',"WHERE ID = '$ID' ");
+     $correctID = (new SELECTS('users_auth'))->getSelectsQuery('COUNT(*)',"WHERE ID = '$ID' ");
           if($correctID > 0){ 
                correctID();
           }else{
@@ -21,7 +21,7 @@ function correctID(){
 }
 
 function correctUsername($username){
-     $correctUsername = (new SELECTS('users'))->getSelectsSelf("SELECT COUNT(*) FROM users WHERE username = :username",[ 'username' => $username ]);
+     $correctUsername = (new SELECTS('users_auth'))->getSelectsSelf("SELECT COUNT(*) FROM users_auth WHERE username = :username",[ 'username' => $username ]);
      $count = $correctUsername->fetchColumn();
 
      if ($count > 0) {
@@ -32,7 +32,7 @@ function correctUsername($username){
 }
 
 function correctPhone($phone){
-     $correctID = (new SELECTS('users'))->getSelectsSelf("SELECT COUNT(*) FROM users WHERE phone = :phone",[ 'phone' => $phone ]);
+     $correctID = (new SELECTS('users_auth'))->getSelectsSelf("SELECT COUNT(*) FROM users_auth WHERE phone = :phone",[ 'phone' => $phone ]);
      $count = $correctID->fetchColumn();
 
      if ($count > 0) {
@@ -85,7 +85,7 @@ if(isset($_POST['register'])){
           // database logic start
           
           try {
-               $insert = $db->prepare('INSERT INTO users (ID,username,password,email,phone,date) VALUES (?,?,?,?,?,?)');
+               $insert = $db->prepare('INSERT INTO users_auth (ID,username,password,email,phone,date) VALUES (?,?,?,?,?,?)');
                
                $push = $insert->execute([
                     correctID(), 
@@ -97,24 +97,27 @@ if(isset($_POST['register'])){
                ]);
           
                if($push){
-                    header('Refresh:3; URL=http://localhost/dashboard/metronicPhpTheme/app/index.php?page=login');
+                    header('Refresh:0.5; URL=http://localhost/dashboard/metronicPhpTheme/app/index.php?pages=login');
 
                     $data = 'succesfull!, you are being directed..';
                     echo json_encode(["message" => $data]);
                }else{
                     $data = 'data is not pushed !' . $insert->errorInfo()[2];
                     echo json_encode(["message" => $data]);
+                    exit();
                }
           
           } catch (PDOException $e) {
                $data = 'Sql or database error code: ' . $e->getMessage();
                echo json_encode(["message" => $data]);
+               exit();
           }
           
           // database logic end
           
      }else{
           echo json_encode(["message" => "information is missing"]);
+          exit();
      }
 
 }
@@ -137,7 +140,7 @@ if(isset($_POST['login'])){
           // database logic start
           
           try {
-               $findUsername = (new SELECTS('users'))->getSelectsSelf("SELECT * FROM users WHERE username = :username", ['username' => $username]);
+               $findUsername = (new SELECTS('users_auth'))->getSelectsSelf("SELECT * FROM users_auth WHERE username = :username", ['username' => $username]);
                $user = $findUsername->fetch(PDO::FETCH_ASSOC);
                
                if (!$user) {
@@ -160,12 +163,14 @@ if(isset($_POST['login'])){
           } catch (PDOException $e) {
                $data = 'Sql or database error code: ' . $e->getMessage();
                echo json_encode(["message" => $data]);
+               exit();
           }
           
           // database logic end
           
      }else{
           echo json_encode(["message" => "information is missing"]);
+          exit();
      }
 
 }

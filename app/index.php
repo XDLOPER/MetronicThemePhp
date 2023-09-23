@@ -5,10 +5,14 @@
  ************************/
 
     // porject imports start
-        
+
         // store connection
         require_once('./src/store/index.php');
-        require_once('./src/store/app/initial.php');
+
+        // database connection
+        require_once('./src/config/database.php');
+        // helpers
+        require_once('./src/utils/helpers/getLanguageBrowser.php');
 
     // porject imports end
 
@@ -17,24 +21,31 @@
     // ENV logic end
 
     // store logic start -> singleton store architecture
-            
-        $APP_STORE = APP_STORE::getInstance($APP_STORE_INITIAL);
+
+        // app store
+        $APP_STORE->setLanguage(getLanguaageBrowser());
+
     // store logic end
 
     // sessions logic start
     session_start();
 
         if(isset($_SESSION['ID'])){
-
             $APP_STORE->setActive(true);
+            // database config start
+                $userID = $_SESSION['ID'];
+                $user = (new SELECTS('users_auth'))->getSelectsQuery('*', "WHERE ID = '$userID'");
+                $user = $user->fetch(PDO::FETCH_ASSOC);
 
+
+                // ID save the store
+                $USER_STORE->setUserID($user['ID']);
+            // database config end
         }else{
             $APP_STORE->setActive(false);
         }
-
     // sessions logic end 
-    
-
+        
     // layout route start
     $ROUTER = isset($_GET['router']) ? $_GET['router'] : 'index';
 
@@ -48,7 +59,7 @@
                 require_once('./src/router/page/errors/500/index.php');
                 break;
             default:
-                require_once('./src/router/page/errors/404/index.php');
+                include('./src/router/page/errors/404/index.php');
                 break;
             // error pages end
         }

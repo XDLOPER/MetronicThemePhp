@@ -15,7 +15,7 @@
                       ?>
                         <!-- BEGIN LANGS -->
                         <li class="langs-block">
-                            <a href="javascript:void(0);" class="current">dynamic Türkiye </a>
+                            <a href="javascript:void(0);" class="current"><?php echo $APP_STORE->getLanguage() ?></a>
                             <div class="langs-block-others-wrapper"><div class="langs-block-others">
                               <?php 
                               

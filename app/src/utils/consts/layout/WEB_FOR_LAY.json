@@ -6,22 +6,22 @@
           "pageLeft":[
                {
                     "title":"about",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=about",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=about",
                     "icon":"fa fa-certificate"
                },
                {
                     "title":"privacy policy",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=privacy-policy",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=privacy-policy",
                     "icon":"fa fa-user-secret"
                },
                {
                     "title":"frequently ask",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=faq",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=faq",
                     "icon":"fa fa-question-circle"
                },
                {
                     "title":"terms&conditions",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=terms-conditions",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=terms-conditions",
                     "icon":"fa fa-comments-o"
                }
           ],
@@ -38,7 +38,7 @@
           "pageRight":[
                {
                     "title":"hesabım",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=account",
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=account",
                     "auth":true
                },
                {
@@ -68,7 +68,7 @@
                "productName":"ürün",
                "lookMyCardButton":{
                     "title":"SEPETİ GÖRÜNTÜLE",
-                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=store&content=wish-list"
+                    "url":"http://localhost/dashboard/metronicPhpTheme/app/index.php?page=leftbarlayout&content=wish-list"
                },
                "complateTheOrderButton":{
                     "title":"SİPARİŞİ TAMAMLA",
@@ -76,42 +76,39 @@
                }
           },
           "pages":[
-               {"title":"kadın","url":""},
-               {"title":"erkek","url":""},
-               {"title":"çocuk","url":""},
-               {"title":"blog","url":""},
-               {"title":"hakkımızda","url":""}
+               {"title":"anasayfa","url":""},
+               {"title":"kategoriler","url":""}
           ]
      },
      "brands":[
           {
                "title":"canon",
-               "imageUrl":"../../../assets/pages/img/brands/canon.jpg",
+               "imageUrl":"src/assets/pages/img/brands/canon.jpg",
                "url":"/"
           },
           {
                "title":"esprit",
-               "imageUrl":"../../../assets/pages/img/brands/esprit.jpg",
+               "imageUrl":"src/assets/pages/img/brands/esprit.jpg",
                "url":"/"
           },
           {
                "title":"gap",
-               "imageUrl":"../../../assets/pages/img/brands/gap.jpg",
+               "imageUrl":"src/assets/pages/img/brands/gap.jpg",
                "url":"/"
           },
           {
                "title":"next",
-               "imageUrl":"../../../assets/pages/img/brands/next.jpg",
+               "imageUrl":"src/assets/pages/img/brands/next.jpg",
                "url":"/"
           },
           {
                "title":"puma",
-               "imageUrl":"../../../assets/pages/img/brands/puma.jpg",
+               "imageUrl":"src/assets/pages/img/brands/puma.jpg",
                "url":"/"
           },
           {
                "title":"zara",
-               "imageUrl":"../../../assets/pages/img/brands/zara.jpg",
+               "imageUrl":"src/assets/pages/img/brands/zara.jpg",
                "url":"/"
           }
 
